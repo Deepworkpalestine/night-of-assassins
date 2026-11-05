@@ -14,7 +14,7 @@ dependencies:
   audioplayers: ^6.0.0
   wakelock_plus: ^1.2.5
   confetti: ^0.7.0
-  share_plus: ^9.0.0
+  share_plus: ^13.3.1
 
 dev_dependencies:
   flutter_test:
