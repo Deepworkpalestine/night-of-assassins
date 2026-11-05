@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible problem in Night of Assassins.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Do not include passwords, signing keys, or personal data."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the unexpected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open the app\n2. Start a game\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version or commit
+      placeholder: "e.g. v1.3.0 or commit SHA"
+  - type: input
+    id: flutter-version
+    attributes:
+      label: Flutter version
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Remove tokens, private data, and other sensitive information before posting.
