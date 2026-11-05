@@ -6,7 +6,6 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 import '../models/game_settings.dart';
 import '../models/game_state.dart';
 import '../models/mafia_role.dart';
-import '../models/player.dart';
 import '../providers/app_providers.dart';
 import '../providers/mafia_game_notifier.dart';
 import '../services/sound_service.dart';
