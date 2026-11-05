@@ -69,7 +69,7 @@ jobs:
           sha256sum Night-of-Assassins.apk > Night-of-Assassins.apk.sha256
 
       - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: night-of-assassins-android-apk
           path: |
