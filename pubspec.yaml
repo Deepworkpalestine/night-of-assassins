@@ -1,0 +1,62 @@
+name: night_of_assassins
+description: "ليلة المغتالين"
+publish_to: 'none'
+version: 1.3.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.2.3
+  audioplayers: ^6.0.0
+  wakelock_plus: ^1.2.5
+  confetti: ^0.7.0
+  share_plus: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/app_icon.png
+    - assets/images/background.png
+    - assets/images/cover.png
+    - assets/images/head.png
+    - assets/images/roles/citizen.png
+    - assets/images/roles/mafia.png
+    - assets/images/roles/doctor.png
+    - assets/images/roles/detective.png
+    - assets/images/roles/mafia_leader.png
+    - assets/images/roles/bodyguard.png
+    - assets/images/roles/spy.png
+    - assets/images/roles/silencer.png
+    - assets/images/roles/hunter.png
+    - assets/images/roles/jester.png
+    - assets/images/roles/gambler.png
+    - assets/sounds/click.wav
+    - assets/sounds/failed.wav
+    - assets/sounds/finish.wav
+    - assets/sounds/success.wav
+  fonts:
+    - family: KOOkies
+      fonts:
+        - asset: assets/fonts/KOOkies-Thin.otf
+          weight: 100
+        - asset: assets/fonts/KOOkies-Light.otf
+          weight: 300
+        - asset: assets/fonts/KOOkies-Regular.otf
+          weight: 400
+        - asset: assets/fonts/KOOkies-Medium.otf
+          weight: 500
+        - asset: assets/fonts/KOOkies-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/KOOkies-Bold.otf
+          weight: 700
+        - asset: assets/fonts/KOOkies-ExtraBold.otf
+          weight: 800
