@@ -1,34 +1,36 @@
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
 
 class SoundService {
-  final AudioPlayer _player = AudioPlayer();
+  static final AudioPlayer _player = AudioPlayer();
 
-  Future<void> playClick() async {
-    HapticFeedback.lightImpact();
+  static Future<void> _play(
+    String fileName,
+    Future<void> Function() hapticFeedback,
+  ) async {
     try {
-      await _player.play(AssetSource('sounds/click.wav'));
+      await hapticFeedback();
+    } catch (_) {}
+
+    try {
+      await _player.play(
+        AssetSource('sounds/$fileName'),
+      );
     } catch (_) {}
   }
 
-  Future<void> playSuccess() async {
-    HapticFeedback.mediumImpact();
-    try {
-      await _player.play(AssetSource('sounds/success.wav'));
-    } catch (_) {}
-  }
+  static Future<void> playClick() =>
+      _play('click.wav', HapticFeedback.lightImpact);
 
-  Future<void> playFinish() async {
-    HapticFeedback.selectionClick();
-    try {
-      await _player.play(AssetSource('sounds/finish.wav'));
-    } catch (_) {}
-  }
+  static Future<void> playSuccess() =>
+      _play('success.wav', HapticFeedback.mediumImpact);
 
-  Future<void> playEliminated() async {
-    HapticFeedback.heavyImpact();
-    try {
-      await _player.play(AssetSource('sounds/failed.wav'));
-    } catch (_) {}
-  }
+  static Future<void> playFinish() =>
+      _play('finish.wav', HapticFeedback.selectionClick);
+
+  static Future<void> playFailed() =>
+      _play('failed.wav', HapticFeedback.heavyImpact);
+
+  static Future<void> playEliminated() => playFailed();
 }
