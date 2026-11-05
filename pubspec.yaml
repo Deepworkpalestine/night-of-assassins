@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.5.1
+  flutter_riverpod: ^3.4.3
   shared_preferences: ^2.2.3
   audioplayers: ^6.0.0
   wakelock_plus: ^1.2.5
