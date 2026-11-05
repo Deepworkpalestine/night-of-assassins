@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/game_settings.dart';
 import '../models/mafia_role.dart';
 import '../providers/app_providers.dart';
 import '../widgets/gothic_background.dart';
